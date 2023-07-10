@@ -39,5 +39,23 @@ namespace ReversedLinkedList
             Console.Write($"{Head.Data} ");
             Print(Head.Next);
         }
+
+        public void ReversedList(Node Head)
+        {
+            Node prev = null;
+            Node current = Head;
+            Node next;
+
+            while (current != null)
+            {
+                next = current.Next;
+                current.Next = prev;
+                prev = current;
+                current = next;
+                Console.Write($"{prev.Data} ");
+
+            }
+            Root = prev;
+        }
     }
 }
