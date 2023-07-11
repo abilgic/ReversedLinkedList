@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReversedLinkedList
 {
-    internal class LinkedList
+    public class LinkedList
     {
         public Node Root;
         public class Node
@@ -52,8 +52,6 @@ namespace ReversedLinkedList
                 current.Next = prev;
                 prev = current;
                 current = next;
-                Console.Write($"{prev.Data} ");
-
             }
             Root = prev;
         }
